@@ -1,0 +1,73 @@
+$darkColor: #004643;
+$lightColor: #abd1c6;
+body {
+  .card {
+      width: 400px;
+      background-color: $lightColor;
+      padding: 15px 30px;
+      border-radius: 5px;
+      box-shadow: 3px 3px 10px #00000085;
+      .card-body, .card-footer {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 5px;
+          .card-quote {
+              text-align: center;
+              img {
+                  transform: rotate(180deg);
+                  width: 50px;
+              }
+          }
+          .card-content {
+              font-size: 20px;
+              text-align: center;
+          }
+      }
+      .card-footer {
+          width: 100%;
+          margin-top: 15px;
+          row-gap: 15px;
+          border-top: 2px solid $darkColor;
+          padding-top: 15px;
+          .card-title {
+              font-size: 20px;
+              text-align: center;
+          }
+          .card-bottom {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              a, button {
+                  background: $darkColor;
+                  border: 0;
+                  outline: none;
+                  cursor: pointer;
+                  border-radius: 5px;
+                  display: grid;
+                  place-items: center;
+              }
+              a {
+                  padding: 6px 8px;
+                  img {
+                      width: 20px;
+                  }
+              }
+              button {
+                  padding: 8px 10px;
+                  color: $lightColor;
+                  font-weight: bold;
+              }
+          }
+      }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+      .card {
+          width: 320px;
+      }
+  }
+}
